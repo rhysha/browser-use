@@ -1,5 +1,4 @@
 import hashlib
-from typing import Optional
 
 from browser_use.dom.history_tree_processor.view import DOMHistoryElement, HashedDomElement
 from browser_use.dom.views import DOMElementNode
@@ -35,9 +34,15 @@ class HistoryTreeProcessor:
             input_text=input_text,
         )
 
+<<<<<<< HEAD
     @staticmethod
     def find_history_element_in_tree(dom_history_element: DOMHistoryElement, tree: DOMElementNode) -> Optional[DOMElementNode]:
         hashed_dom_history_element = HistoryTreeProcessor._hash_dom_history_element(dom_history_element)
+=======
+	@staticmethod
+	def find_history_element_in_tree(dom_history_element: DOMHistoryElement, tree: DOMElementNode) -> DOMElementNode | None:
+		hashed_dom_history_element = HistoryTreeProcessor._hash_dom_history_element(dom_history_element)
+>>>>>>> upstream/stable
 
         def process_node(node: DOMElementNode):
             if node.highlight_index is not None:
